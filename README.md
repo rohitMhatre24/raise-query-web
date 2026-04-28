@@ -1,16 +1,126 @@
-# React + Vite
+# 🎯 Raise Query Web (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based dashboard for managing user queries with role-based UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧠 Features
 
-## React Compiler
+* 🔐 Login with JWT
+* 📊 User Dashboard (KPI + Applications)
+* 🧑‍💼 Admin Dashboard (All Applications)
+* 🔄 Status Management (Approve/Reject)
+* 👥 User Management (Admin)
+* ⚡ Real-time filtering (KPI-based)
+* 🎨 Clean UI with Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js (Vite)
+* Tailwind CSS
+* Axios
+* React Router
+* React Hot Toast
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── components/
+ ├── pages/
+ ├── services/
+ ├── App.jsx
+ ├── main.jsx
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repo
+
+```bash
+git clone <your-frontend-repo-url>
+cd raise-query-web
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run App
+
+```bash
+npm run dev
+```
+
+---
+
+## 🌐 API Configuration
+
+Update base URL in:
+
+📁 `src/services/api.js`
+
+```js
+baseURL: "http://localhost:5000/api"
+```
+
+---
+
+## 🔐 Authentication Flow
+
+1. User logs in
+2. Token stored in localStorage
+3. Axios attaches token automatically
+4. Protected routes enforced
+
+---
+
+## 🧑‍💼 Roles
+
+### 👤 USER
+
+* View own applications
+* Create application
+* Dashboard KPIs
+
+---
+
+### 👨‍💼 ADMIN
+
+* View all applications
+* Approve / Reject
+* Manage users
+* View analytics
+
+---
+
+## 🎨 UI Highlights
+
+* Responsive layout
+* Sidebar navigation
+* KPI cards (clickable filters)
+* Status badges
+* Modal forms
+
+---
+
+## 🚀 Future Improvements
+
+* Better UI animations
+* Dark mode
+* Pagination optimization
+* Notifications system
+
+---
+
+## 👨‍💻 Author
+
+Rohit Mhatre
