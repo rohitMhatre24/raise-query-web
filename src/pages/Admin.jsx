@@ -23,7 +23,7 @@ const Admin = () => {
         API.get(`/applications`), // ✅ NO filter here
         API.get(`/applications/admin/dashboard`),
       ]);
-    //   console.log("Admin data:", { appsRes, statsRes });
+      // console.log("Admin data:", { appsRes, statsRes });
       setApplications(appsRes.data.data);
       setStats(statsRes.data.data);
 
@@ -129,10 +129,11 @@ const Admin = () => {
                     </tr>
                   ) : (
                     filteredApplications.map((app) => (
+                      
                       <tr key={app.id} className="border-t">
 
                         <td className="p-3">
-                          {app.User?.name || "N/A"}
+                          {app.user?.name || "N/A"}
                         </td>
 
                         <td className="p-3">{app.subject}</td>
