@@ -53,8 +53,22 @@ cd raise-query-web
 ```bash
 npm install
 ```
+### 3. Setup Environment Variables
 
-### 3. Run App
+Create `.env` file:
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+### 4. Setup Production Environment Variables
+
+Create `.env.production` file:
+
+```
+VITE_API_URL=https://your-backend.onrender.com/api
+```
+
+### 5. Run App
 
 ```bash
 npm run dev
