@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 
+import {formatDate} from "../utils/date";
+
 const Admin = () => {
   const [applications, setApplications] = useState([]);
   const [stats, setStats] = useState({});
@@ -116,6 +118,8 @@ const Admin = () => {
                     <th className="p-3">User</th>
                     <th className="p-3">Subject</th>
                     <th className="p-3">Status</th>
+                    <th className="p-3">Created At</th>
+                    <th className="p-3">Updated At</th>
                     <th className="p-3">Action</th>
                   </tr>
                 </thead>
@@ -151,7 +155,8 @@ const Admin = () => {
                             {app.status}
                           </span>
                         </td>
-
+                            <td className="p-3">{formatDate(app.createdAt)}</td>
+                            <td className="p-3">{formatDate(app.updatedAt)}</td>
                         <td className="p-3 space-x-2">
 
                             {/* ✅ If PENDING → show both */}

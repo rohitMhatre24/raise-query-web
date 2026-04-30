@@ -59,31 +59,34 @@ const Users = () => {
         <main className="p-6">
 
           {/* KPI */}
-          <div className="bg-white p-4 rounded shadow mb-6">
-            <h3>Total Users</h3>
-            <h2 className="text-xl font-bold">{count}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+            <div className="cursor-pointer bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+              <h3>Total Users</h3>
+              <h2 className="text-xl font-bold">{count}</h2>
+            </div>
           </div>
-
           {/* TABLE */}
+          <div className="bg-white rounded-lg shadow-sm overflow-hidden" >
           <table className="w-full bg-white shadow">
             <thead>
               <tr>
-                <th className="p-3">Name</th>
-                <th className="p-3">Email</th>
-                <th className="p-3">Role</th>
+                <th className="p-4">Name</th>
+                <th className="p-4">Email</th>
+                <th className="p-4">Role</th>
               </tr>
             </thead>
 
             <tbody>
               {users.map((u) => (
                 <tr key={u.id}>
-                  <td className="p-3">{u.name}</td>
-                  <td className="p-3">{u.email}</td>
-                  <td className="p-3">{u.role}</td>
+                  <td className="p-4 text-center">{u.name}</td>
+                  <td className="p-4 text-center">{u.email}</td>
+                  <td className="p-4 text-center">{u.role}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          </div>
 
         </main>
       </div>
